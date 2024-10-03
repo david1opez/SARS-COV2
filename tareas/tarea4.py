@@ -14,25 +14,36 @@ def tarea4():
                 genome2 += line
 
     def find_differences(seq1, seq2):
-        # Determinar la longitud de la secuencia más corta
         min_length = min(len(seq1), len(seq2))
         
         differences = []
         
-        # Comparar los codones (substrings de 3 caracteres)
-        for i in range(0, min_length, 3):
-            codon1 = dnaToProteinSequence.translate(seq1[i:i+3])
-            codon2 = dnaToProteinSequence.translate(seq2[i:i+3])
-            
+        for i in range(0, min_length):
+            codon1 = seq1[i]
+            codon2 = seq2[i]
+
             if codon1 != codon2:
-                differences.append((i, codon1, codon2))
+                completeCodon1, completeCodon2 = "", ""
+
+                if i+1 % 3 == 1:
+                    completeCodon1 = seq1[i-1:i+2]
+                    completeCodon2 = seq2[i-1:i+2]
+                elif i+1 % 3 == 2:
+                    completeCodon1 = seq1[i-2:i+1]
+                    completeCodon2 = seq2[i-2:i+1]
+                else:
+                    completeCodon1 = seq1[i:i+3]
+                    completeCodon2 = seq2[i:i+3]
+
+                differences.append((i, f"{dnaToProteinSequence.translate(completeCodon1)} ({completeCodon1})", f"{dnaToProteinSequence.translate(completeCodon2)} ({completeCodon2})"))
 
         # Manejar caracteres restantes en la secuencia más larga
         if len(seq1) != len(seq2):
             longer_seq = seq1 if len(seq1) > len(seq2) else seq2
             for i in range(min_length, len(longer_seq), 3):
-                codon = dnaToProteinSequence.translate(longer_seq[i:i+3])
+                codon = longer_seq[i:i+3]
                 differences.append((i, codon, None))  # None para el codón faltante
+                break
 
         return differences
 
