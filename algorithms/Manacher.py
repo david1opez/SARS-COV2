@@ -1,3 +1,4 @@
+# Complejidad: O(n)
 def longestPalindrome(s):
     # Añadimos # como separadores especiales para poder usar palindromes pares e impares de igual manera
     t = '#'.join(f'^{s}$')  # Añadimos ^ al inicio y $ al final para evitar desbordamientos
