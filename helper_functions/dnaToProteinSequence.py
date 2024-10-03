@@ -29,7 +29,7 @@ def translate(dna_sequence):
         else:
             protein_sequence.append('?')
 
-        # if codon_table.get(codon) == '*':
-        #     break
+        if codon_table.get(codon) == '*':
+            break
             
     return ''.join(protein_sequence)
