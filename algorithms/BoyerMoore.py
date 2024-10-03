@@ -1,3 +1,4 @@
+# Complejidad: O(n/m)
 def find(text, pattern):
     # Funcion auxiliar. Crea la tabla de bad character table
     def build_bad_char_table(pattern):
