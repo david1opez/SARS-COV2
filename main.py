@@ -1,4 +1,4 @@
-from tareas import tarea1, tarea2, tarea3
+from tareas import tarea1, tarea2, tarea3, tarea4
 
 def main():
     print("\n=========================================")
@@ -13,6 +13,10 @@ def main():
     print("                  TAREA 3                  ")
     print("=========================================\n")
     tarea3.tarea3() # ZAlgorithm (47.54 ms avg.)
+    print("\n=========================================")
+    print("                  TAREA 4                  ")
+    print("=========================================\n")
+    tarea4.tarea4()
 
 if __name__ == "__main__":
     main()

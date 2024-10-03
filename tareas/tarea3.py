@@ -28,4 +28,4 @@ def tarea3():
                 else:
                     print("\nNo se encontró la secuencia de aminoácidos en el genoma")
     
-    print("\nTiempo de ejecución:", round((time.time() - startTime) * 1000, 2), "ms avg.")
+    print("\nTiempo de ejecución:", round((time.time() - startTime) * 1000, 2), "ms")
