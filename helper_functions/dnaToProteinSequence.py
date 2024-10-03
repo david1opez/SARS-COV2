@@ -1,3 +1,6 @@
+# Tabla de codones que mapea tripletes de ADN a aminoacidos
+# Por cada triplete se asigna un aminoácido que es representado con una letra
+# Un * indica un codon de parada
 codon_table = {
     'TCA': 'S', 'TCC': 'S', 'TCG': 'S', 'TCT': 'S',
     'TTC': 'F', 'TTT': 'F', 'TTA': 'L', 'TTG': 'L',
@@ -17,19 +20,24 @@ codon_table = {
     'GGA': 'G', 'GGC': 'G', 'GGG': 'G', 'GGT': 'G'
 }
 
+# Funcion que traduce una secuencia de ADN a secuencia de proteinas
 def translate(dna_sequence):
+    # Inicializamos una lista vacia donde se almacena la secuencia de proteinas
     protein_sequence = []
     
+    # Como cada codon tiene 3 bases, iteramos la secuencia de ADN en pasos de 3
     for i in range(0, len(dna_sequence), 3):
+        # Extraemos un codon de tres letras.
         codon = dna_sequence[i:i+3]
         
+        # Si el codon se encuentra en la tabla, procedemos al siguiente paso
         if codon in codon_table:
+            # Si el codon no es un codon de parada (*), añadimos el aminoacido adecuado a la secuencia de proteinas.
             if(codon_table[codon] != '*'):
                 protein_sequence.append(codon_table[codon])
         else:
+            # Si el codon no esta en la tabla, añadimos un '?' para indicar un codon desconocido.
             protein_sequence.append('?')
-
-        if codon_table.get(codon) == '*':
-            break
             
+    # Devolvemos la secuencia de proteinas como una cadena de texto.
     return ''.join(protein_sequence)
