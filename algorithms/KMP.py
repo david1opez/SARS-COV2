@@ -1,3 +1,4 @@
+# Complejidad: O(m + n)
 def find(text, pattern):
     # Funcion auxiliar. Crea la tabla lps
     def build_lps(pattern):
