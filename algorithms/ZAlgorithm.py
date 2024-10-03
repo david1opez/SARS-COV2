@@ -1,3 +1,4 @@
+# Complejidad: O(m + n)
 def find(text, pattern):
     # Concatenamos el patron con un delimitador único ('$') y con el texto
     concat = pattern + '$' + text
