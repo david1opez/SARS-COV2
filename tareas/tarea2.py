@@ -35,7 +35,7 @@ def tarea2():
     print("\nGen S:")
     print("Longitud del palíndromo más largo:", len(genSPalindrome))
 
-    with open("tareas/tarea2.txt", "w") as file:
+    with open("tarea2.txt", "w") as file:
         file.write("Gen M longest palindrome:\n")
         file.write(genMPalindrome)
 
