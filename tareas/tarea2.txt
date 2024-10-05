@@ -1,8 +1,0 @@
-Gen M longest palindrome:
-CTAAAGAAATC
-
-Gen ORF1AB longest palindrome:
-CTCAATGACTTCAGTAACTC
-
-Gen S longest palindrome:
-GAATTTGTGTTTAAG

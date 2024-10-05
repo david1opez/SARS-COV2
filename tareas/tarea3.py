@@ -14,6 +14,9 @@ def tarea3():
 
     startTime = time.time()
 
+    print(len(genome))
+    print(len(genomeProteinSequence))
+
     with open("seq-proteins.txt") as file:
         for line in file.read().splitlines():
             if line[0] == ">":
@@ -24,10 +27,8 @@ def tarea3():
                 if(len(genomeIndices) > 0):
                     print("Indices en el genoma:", genomeIndices)
                     print("Secuencia de aminoácidos:", genomeProteinSequence[genomeIndices[0]:genomeIndices[0]+4])
-                    print("Secuencia de codones:", genome[genomeIndices[0]*3:genomeIndices[0]*3+12])
                 else:
                     print("No se encontró la secuencia de aminoácidos en el genoma")
-                    print(line)
 
     
     print("\nTiempo de ejecución:", round((time.time() - startTime) * 1000, 2), "ms")
