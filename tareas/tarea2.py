@@ -1,7 +1,7 @@
 import time
 from algorithms import Manacher
 
-# Funcion que busca los palindromos mas largos en tres secuencias geneticas
+# Funcion que busca los palindromos mas largos en las tres secuencias geneticas
 def tarea2():
     executionTime = 0.0  # Variable para guardar el tiempo de ejecucion
     genM, genORF1AB, genS = "", "", ""  # Variables para guardar las secuencias de los genes
