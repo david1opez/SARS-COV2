@@ -43,7 +43,7 @@ def tarea1(algorithm):
         indicesORF1AB = BoyerMoore.find(genome, genORF1AB)
         indicesS = BoyerMoore.find(genome, genS)
 
-        executionTime = time.time() - startTime  # Calcula el tiempo de ejecución
+        executionTime = time.time() - startTime  # Calcula el tiempo de ejecucion
     # Algoritmo KMP
     else:
         startTime = time.time()  # Usamos el cronometro
@@ -53,7 +53,7 @@ def tarea1(algorithm):
         indicesORF1AB = KMP.find(genome, genORF1AB)
         indicesS = KMP.find(genome, genS)
 
-        executionTime = time.time() - startTime  # Calcula el tiempo de ejecución
+        executionTime = time.time() - startTime  # Calcula el tiempo de ejecucion
 
     # Resultados para el gen S
     print("Gen S")
@@ -70,5 +70,5 @@ def tarea1(algorithm):
     print("Indices de aparición: ", indicesORF1AB)
     print("Primeros 12 caracteres: ", genome[indicesORF1AB[0]:indicesORF1AB[0]+12])
 
-    # Tiempo total de ejecución
+    # Tiempo total de ejecucion
     print("\nTiempo de ejecución del algoritmo: ", round(executionTime*1000,1), "ms")
