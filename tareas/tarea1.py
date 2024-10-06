@@ -1,7 +1,7 @@
 import time
 from algorithms import KMP, BoyerMoore
 
-# Funcion que recibe el nombre del algoritmo a utilizar
+# Funcion para encontrar los indices de aparicion de cada uno de los tres genes
 def tarea1(algorithm):
     executionTime = 0.0  # Variable para guardar el tiempo de ejecucion
     genome = ""  # Variable para guardar el genoma completo
