@@ -18,10 +18,6 @@ def tarea3():
     # Usamos el cronometro
     startTime = time.time()
 
-    # Mostramos la longitud del genoma y la longitud de la secuencia de proteinas traducida
-    print(len(genome))
-    print(len(genomeProteinSequence))
-
     # Leemos el archivo de las secuencias de proteinas
     with open("seq-proteins.txt") as file:
         for line in file.read().splitlines():
